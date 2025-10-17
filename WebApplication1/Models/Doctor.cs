@@ -10,7 +10,7 @@ namespace WebApplication1.Models
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
 
-        // 🔹 علاقة مع ApplicationUser
+       
         [ForeignKey("User")]
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
