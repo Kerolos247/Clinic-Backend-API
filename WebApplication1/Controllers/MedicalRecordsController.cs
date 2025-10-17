@@ -70,11 +70,11 @@ namespace WebApplication1.Controllers
             var currentUserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUserRole = User.FindFirst(ClaimTypes.Role)?.Value;
 
-            // 🧩 المريض يرى سجله فقط
+            //  المريض يرى سجله فقط
             if (currentUserRole == "Patient" && record.Patient.UserId != currentUserId)
                 return Forbid();
 
-            // 🧩 الدكتور يرى سجله فقط إذا هو المسؤول عنه
+            //  الدكتور يرى سجله فقط إذا هو المسؤول عنه
             if (currentUserRole == "Doctor" && record.Doctor.UserId != currentUserId)
                 return Forbid();
 
