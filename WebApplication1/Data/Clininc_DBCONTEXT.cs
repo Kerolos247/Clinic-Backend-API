@@ -25,13 +25,13 @@ namespace WebApplication1.Data
                .HasOne(d => d.User)
                .WithOne()
                .HasForeignKey<Doctor>(d => d.UserId)
-               .OnDelete(DeleteBehavior.Restrict); // ✅ بدل Cascade
+               .OnDelete(DeleteBehavior.Restrict); 
 
             modelBuilder.Entity<Patient>()
                .HasOne(p => p.User)
                .WithOne()
                .HasForeignKey<Patient>(p => p.UserId)
-               .OnDelete(DeleteBehavior.Restrict); // ✅ بدل Cascade
+               .OnDelete(DeleteBehavior.Restrict);
 
 
             modelBuilder.Entity<Appointment>()
