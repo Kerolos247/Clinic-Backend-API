@@ -90,7 +90,7 @@ namespace WebApplication1.Controllers
 
             await _userManager.AddToRoleAsync(user, dto.Role);
 
-            // نجهز الـ response DTO
+            
             var response = new UserResponseDto
             {
                 Id = user.Id,
