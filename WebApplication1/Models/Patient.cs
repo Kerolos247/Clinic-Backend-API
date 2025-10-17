@@ -9,7 +9,7 @@ namespace WebApplication1.Models
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
 
-        // 🔹 علاقة مع ApplicationUser
+       
         [ForeignKey("User")]
         public string UserId { get; set; }
         public ApplicationUser User { get; set; }
